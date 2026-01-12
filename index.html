@@ -107,11 +107,10 @@
             };
             resolve(dummyData);
           }
-        }, 1000); // 1 second delay
+        }, 1000);
       });
 
       try {
-        // 'await' works exactly the same way here as it does with fetch!
         const data = await simulateApiCall;
         renderWeather(data);
       } catch (err) {
