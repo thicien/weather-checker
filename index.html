@@ -91,15 +91,10 @@
       }
     });
 
-    // ASYNC FUNCTION (Simulating a Promise)
     async function getWeather(city) {
       showLoading();
-
-      // We use a Promise + setTimeout to simulate the "Event Loop" delay
-      // This mimics the behavior of a real API call
       const simulateApiCall = new Promise((resolve, reject) => {
         setTimeout(() => {
-          // Logic: If user types "Error", simulate a fail. Otherwise, succeed.
           if (city.toLowerCase() === 'error') {
             reject(new Error("City not found"));
           } else {
